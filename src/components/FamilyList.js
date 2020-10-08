@@ -5,16 +5,18 @@ const FamilyList = ({ list }) => {
   var familyList = "Start adding posts";
   if (list) {
     familyList = list.map((r) => (
-      <Relation
-        key={r._id}
-        born={r.born}
-        hometown={r.hometown}
-        id={r.id}
-        name={r.name}
-        profileImageUrl={null}
-        // p1={r.parentId1}
-        // p1={parentId2}
-      />
+      <div key={r.id}>
+        <Relation
+          key={r._id}
+          born={r.born}
+          hometown={r.hometown}
+          id={r.id}
+          name={r.name}
+          profileImageUrl={null}
+          p1={r.parentId1}
+          p1={r.parentId2}
+        />
+      </div>
     ));
   }
 

@@ -2,7 +2,6 @@ import React from "react";
 import UserDash from "./UserDash";
 
 const Homepage = ({ currentUser }) => {
-  console.log(currentUser);
   if (!currentUser.isAuthenticated) {
     return (
       <div className="home-hero">

@@ -19,7 +19,7 @@ const Navbar = ({ currentUser, logout, login }) => {
         ) : (
           <ul className="nav navbar-nav navbar-right">
             <li>
-              <a href="/signup">Sign up</a>
+              <a href="/">Sign up</a>
             </li>
             <li>
               <button onClick={login} to="/signin">

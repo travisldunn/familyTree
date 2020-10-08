@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import DefaultProfileImg from "../images/default-profile-image.png";
 
 const Relation = ({
@@ -10,26 +10,25 @@ const Relation = ({
   id,
   key,
   profileImageUrl,
-}) => (
-  <div key={key}>
-    <li className="list-group-item">
-      <img
-        src={profileImageUrl || DefaultProfileImg}
-        alt={name}
-        height="100"
-        width="100"
-        className="timeline-image"
-      />
-      <div className="post-area">
-        {/* <Link to="/">{name} </Link> */}
-        <h1>{name}</h1>
-        <span className="text-muted">{born}</span>
-        <p>{hometown}</p>
-        <p>{}</p>
-        <p>{}</p>
-      </div>
-    </li>
-  </div>
-);
+}) => {
+  return (
+    <div onClick={() => console.log(name)}>
+      <li className="list-group-item">
+        <img
+          src={profileImageUrl || DefaultProfileImg}
+          alt={name}
+          height="100"
+          width="100"
+          className="timeline-image"
+        />
+        <div className="post-area">
+          <h1>{name}</h1>
+          <span className="text-muted">{born}</span>
+          <p>{hometown}</p>
+        </div>
+      </li>
+    </div>
+  );
+};
 
 export default Relation;
